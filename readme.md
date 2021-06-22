@@ -6,9 +6,12 @@
  
  **pypy3 Setup ubuntu**
 -
- pypy3 setup:
+ installation steps:
  - sudo apt install pypy3
  - sudo apt-get install pip
  - sudo apt-get install pypy3-dev
  - pypy3 -m pip install pyscrypt
  - pypy3 -m pip install pycryptodome
+
+Usage:
+ - pypy3 PasswordManager.py
