@@ -1,5 +1,6 @@
-from genericpath import isfile
+from genericpath import isdir, isfile
 from hmac import new
+from os import mkdir
 import re
 import string
 import getpass
@@ -268,6 +269,9 @@ def backup():
 
 #Is the main loop of the program, will get user input and switch between logged in and logged out states.
 def main():
+    if isdir('./data') == False:
+        mkdir('data')
+    
     user = None
     quit = False
     userName = None
@@ -289,7 +293,9 @@ def main():
             quit = True
             backup()
 
-    userName = user.getUser()
+    if quit is False:
+        userName = user.getUser()
+    
     while quit is False:
         print(f"\nLogged in as {userName}")
         print("Commands are:\n==========================================\nGenerate Password (g)\nRetrieve Password (r)\n\nLogout (l)\nQuit Application (q)\n==========================================\n")
