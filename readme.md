@@ -1,4 +1,4 @@
-#Password Manager
+# Password Manager
 As a project we were asked to make a Password Manager in a language of our choice. I chose to implement this in python, as I needed to learn the language for another project. This project used scrypt to increase the computational time of the hashing in order to increase the time it would take to brute force a hash. The users Masterpassword is run through this process to create a key, and then any generated passwords are run through this process and stored using the users key.
 
 **Compiler Choice**
